@@ -9,9 +9,9 @@ func Sum(numbers []int) int {
 }
 
 func SumAll(numberList ...[]int) []int {
-	// number list içerisinde dönen bir fonskyon yaz
-	// içerisine girilen slice ların toplamını döndür
-	// yeni bir listeye ekle
+	// Write a function that returns a number list
+	// Return the sum of the slices entered
+	// add to a new list
 	var sums []int
 	for _, n := range numberList {
 		sums = append(sums, Sum(n))
