@@ -41,7 +41,9 @@ func BenchmarkArea(b *testing.B) {
 
 	for _, tt := range areaTest {
 		b.Run(tt.name, func(b *testing.B) {
-			Area(tt.shape)
+			for i := 0; i < b.N; i++ {
+				Area(tt.shape)
+			}
 		})
 	}
 }
